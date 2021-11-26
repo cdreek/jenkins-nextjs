@@ -10,13 +10,13 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh 'docker build -t testname .'
+        sh 'docker build -t ghcr.io/cdreek/myjenkins-blueocean:1.1 .'
       }
     }
 
     stage('Lint') {
       steps {
-        sh 'docker run testname'
+        sh 'docker run ghcr.io/cdreek/myjenkins-blueocean:1.1'
       }
     }
 
